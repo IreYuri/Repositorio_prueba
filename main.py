@@ -477,7 +477,8 @@ while start_trivia == True: #si es True; se repite el ciclo
   print()
 
   numero_azar = int(input("Dime un numero entre 1 al 100: "))
-  if numero_azar in range(1,101):
+  while respuesta_10 not in range(1,101):
+    respuesta_10 = int(input("Dime un numero entre 1 al 100: "))
     if respuesta_puntosExtras == "a" :
       points = points * numero_azar
       print("%s" %name, " 🌟 \n")
@@ -487,11 +488,9 @@ while start_trivia == True: #si es True; se repite el ciclo
     elif respuesta_puntosExtras == "c":
       points = points / numero_azar
       print("%s" %name, " 🌟 \n")
-    else:
+    else: 
       points = points * 100 * numero_azar
       print("%s" %name, " 🌟 \n")
-  else:
-    numero_azar = int(input("Dime un numero entre 1 al 100: "))
     
   time.sleep(2)
 
@@ -515,7 +514,12 @@ time.sleep(1)
 print( YELLOWFONDO +"  ✦✦✦ BYE ✦✦✦  "+ NORMAL)
 print()
 
-
+#FRASE DEL DIA:
+frase = ['«No te preocupes si no funciona bien.\nSi todo lo hiciera, no tendrías trabajo.»\n-La ley de Mosher sobre la ingeniería de Software','«Cualquiera puede hablar. Enséñame el código.»\n-Linus Torvalds']
+for number in range(0,2):
+  print(frase[number])
+  time.sleep(1)
+  print()
 
 
 
